@@ -33,9 +33,12 @@ function chatBotSendMessage(messageText){
     messageElement.classList.add('w-50');
     messageElement.classList.add('float-left');
     messageElement.classList.add('shadow-sm');
+    
     messageElement.style.margin="10px";
     messageElement.style.padding="5px";
-    messageElement.innerHTML="<span>Buddy:</span>"+
+    messageElement.style.backgroundColor="#5a99ee";
+    messageElement.style.borderRadius="40px";
+    messageElement.innerHTML="<span> &nbsp;&nbsp;Buddy:</span>"+
     "<span style="+"margin-top: 10px;padding: 10px"+">"+" "+messageText+"</span>"
     messageElement.animate([{easing:"ease-in",opacity:0.4},{opacity:1}],{duration:1000})
     chatContainer.appendChild(messageElement);
@@ -49,8 +52,10 @@ function sendMessage(messageText){
     messageElement.classList.add('float-right');
     messageElement.classList.add('shadow-sm');
     messageElement.style.margin="10px";
+    messageElement.style.backgroundColor='#fc6d4c';
     messageElement.style.padding="5px";
-    messageElement.innerHTML="<span>You:</span>"+
+    messageElement.style.borderRadius="40px";
+    messageElement.innerHTML="<span>&nbsp;&nbsp;You:</span>"+
     "<span style="+"margin-top: 10px;padding: 10px"+">"+" "+messageText+"</span>"
     messageElement.animate([{easing:"ease-in",opacity:0.4},{opacity:1}],{duration:1000})
     chatContainer.appendChild(messageElement);
